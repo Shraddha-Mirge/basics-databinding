@@ -1,0 +1,33 @@
+<label>Team Name</label>
+<!--<input-->
+  <!--type="text"-->
+  <!--class="form-control"-->
+  <!--(input)="onUpdateServerName($event)">-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="TeamName" id="demo">
+
+<script>
+   if( TeamName == Mumbai ) {
+    document.getElementById("demo").innerHTML = "Win 5 matches"
+      
+   } else {
+     if( TeamName == csk ) {
+    document.getElementById("demo").innerHTML = "Win 2 matches"
+      
+   }
+   }
+   
+  
+
+</script>
+  
+<!--<p>{{ serverName }}</p>-->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Details</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
